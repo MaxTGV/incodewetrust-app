@@ -1,6 +1,6 @@
 # Чак Норис челендж 
 
-Ссылка для тестирования - https://codesandbox.io/embed/testovoe-react-forked-dy8pu?fontsize=14&hidenavigation=1&theme=dark
+Ссылка для тестирования - https://codesandbox.io/embed/misty-snow-0ju7l?fontsize=14&hidenavigation=1&theme=dark
 
 - Есть Апи которое умеет получать шутки Чака Нориса - https://api.chucknorris.io/
 1. Реализован интерфейс который бы по нажатию кнопки получал одну шутку и отображал ее на экране
