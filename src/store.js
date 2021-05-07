@@ -4,8 +4,8 @@ import { favoriteQuoteSlice } from "./state/favoriteQuoteSlice";
 import { quoteSlice } from "./state/quoteSlice";
 
 const reducer = {
-  jokes: quoteSlice.reducer,
-  favoriteJokes: favoriteQuoteSlice.reducer,
+  quote: quoteSlice.reducer,
+  favoriteQuote: favoriteQuoteSlice.reducer,
 };
 
 export const store = configureStore({

@@ -7,7 +7,7 @@ export const quoteSlice = createSlice({
   reducers: {},
   extraReducers: {
     [fetchQuote.fulfilled]: (state, action) => {
-      state.quote = action.payload;
+      state.data = action.payload;
     },
   },
 });
