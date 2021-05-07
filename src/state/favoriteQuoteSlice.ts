@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { QuoteType } from "../type";
 
 export const favoriteQuoteSlice = createSlice({
   name: "favoriteQuote",
-  initialState: { data: JSON.parse(localStorage.getItem("favorite")) || [] },
+  initialState: { data: JSON.parse(localStorage.getItem("favorite")!)},
   reducers: {
     addQuote: (state, action) => {
       if (state.data.length === 10) {
@@ -21,7 +22,7 @@ export const favoriteQuoteSlice = createSlice({
     },
     removeQuote: (state, action) => {
       const newFavoriteQuoteList = state.data.filter(
-        (quote) => quote.id !== action.payload.id
+        (quote: QuoteType) => quote.id !== action.payload.id
       );
       localStorage.setItem("favorite", JSON.stringify(newFavoriteQuoteList));
       return { data: newFavoriteQuoteList };

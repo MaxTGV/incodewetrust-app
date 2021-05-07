@@ -27,6 +27,11 @@ const StyledButton = styled.button`
   }
 `;
 
-export const Button = ({ children, ...props }) => {
+interface IButton {
+  children: string;
+  onClick(): void;
+}
+
+export const Button = ({ children, ...props }: IButton) => {
   return <StyledButton {...props}>{children}</StyledButton>;
 };

@@ -5,6 +5,7 @@ import remove from "../img/remove.svg";
 import { useHistory } from "react-router";
 import { Button } from "../shared/components/Button";
 import { favoriteQuoteSlice } from "../state/favoriteQuoteSlice";
+import { QuoteType } from "../type";
 
 const FavoriteQuoteContainer = styled.div`
   width: 100%;
@@ -55,7 +56,7 @@ export const FavoriteQuotesPage = () => {
   const history = useHistory();
   const dispatch = useDispatch();
 
-  const removeQuote = (quote) => {
+  const removeQuote = (quote: QuoteType) => {
     return dispatch(favoriteQuoteSlice.actions.removeQuote(quote));
   };
 
@@ -63,7 +64,7 @@ export const FavoriteQuotesPage = () => {
     <FavoriteQuoteContainer>
       <QuoteContainer>
         {favoriteQuoteList &&
-          favoriteQuoteList.map((quote) => (
+          favoriteQuoteList.map((quote: QuoteType) => (
             <QuoteItem key={quote.id}>
               <p>{quote.value}</p>
               <img
