@@ -5,6 +5,14 @@ export const favoriteQuoteSlice = createSlice({
   initialState: { data: JSON.parse(localStorage.getItem("favorite")) || [] },
   reducers: {
     addQuote: (state, action) => {
+      if (state.data.length === 10) {
+        const updateData = state.data.slice(1, 11);
+        localStorage.setItem(
+          "favorite",
+          JSON.stringify([...updateData, action.payload])
+        );
+        return { data: [...updateData, action.payload] };
+      }
       localStorage.setItem(
         "favorite",
         JSON.stringify([...state.data, action.payload])
