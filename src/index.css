@@ -48,7 +48,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+ margin: 0 auto;
+ padding: 0px 33px;
+ max-width: 925px;
+ height: 608px;
+ background: #f9f9fb;
 }
